@@ -29,7 +29,7 @@ SELECT
     SAFE_CAST(TRIM(tipo_classif) AS STRING) AS tipo_classificacao,
     SAFE_CAST(TRIM(classificacao) AS STRING) AS classificacao,
     SAFE_CAST(REGEXP_REPLACE(TRIM(emp_codigo), r'.0$', '') AS STRING) AS id_empresa,
-    SAFE_CAST(data_particao AS DATE) data_particao,
+    SAFE_CAST(data_particao AS DATE) data_particao
 FROM rj-smfp.recursos_humanos_ergon_staging.ficha_financeira_contabil AS t
 WHERE
     data_particao < CURRENT_DATE('America/Sao_Paulo')
