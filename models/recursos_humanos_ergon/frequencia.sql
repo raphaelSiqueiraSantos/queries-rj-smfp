@@ -13,7 +13,7 @@
 SELECT 
     SAFE_CAST(REGEXP_REPLACE(TRIM(numfunc), r'\.0$', '') AS STRING) AS id_funcionario,
     SAFE_CAST(REGEXP_REPLACE(TRIM(numvinc), r'\.0$', '') AS STRING) AS id_vinculo,
-    SAFE_CAST(TRIM(dtini) AS STRING) AS data_inicio,
+    SAFE_CAST(TRIM(dtini) AS DATE) AS data_inicio,
     SAFE_CAST(TRIM(dtfim) AS STRING) AS data_final,
     SAFE_CAST(TRIM(tipofreq) AS STRING) AS tipo_frequencia,
     SAFE_CAST(REGEXP_REPLACE(TRIM(codfreq), r'\.0$', '') AS STRING) AS id_frequencia,
